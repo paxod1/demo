@@ -1,0 +1,68 @@
+
+RENDERING 
+
+import ReactDom from "react-dom/client";
+
+const hello = ReactDom.createRoot(document.getElementById('hei'))
+hello.render(
+  <h1>Hello world!</h1>
+)
+
+
+
+RENDERING BY createElement :-
+
+import React from "react";
+import ReactDom from "react-dom/client";
+
+const hello = ReactDom.createRoot(document.getElementById('hei'))
+
+const fullname = (user) => {
+  return `${user.first_name}${user.last_name} `
+}
+
+const FirstTag = () => {
+
+  let u = {
+    first_name: 'arun',
+    last_name: 'gopi'
+  }
+  let place = 'kerala'
+  let ele_2 = React.createElement('h2', { style: { textAlign: 'center', color: 'blue' } }, "from " + place)
+  let ele_1 = React.createElement('h1', { style: { textAlign: 'center', color: 'red' } }, `Hello  ${fullname(u)}!`)
+  return (
+    <div>
+      {ele_1}
+      {ele_2}
+    </div>
+  )
+}
+
+
+hello.render(
+  <FirstTag />
+)
+
+
+
+import React from "react";
+import ReactDom from "react-dom/client";
+
+const hello = ReactDom.createRoot(document.getElementById('hei'))
+
+
+const FirstTag = (x) => {
+  return (
+    <div>
+      <h1 style={{ color: x.color, textAlign: x.textAlign }}>Welcome {x.name}</h1>
+    </div>
+  )
+}
+
+
+hello.render(
+  <div>
+    <FirstTag color="red" name="Ashok" />
+    <FirstTag textAlign='center' color="blue" name="Ammu" />
+  </div>
+)

@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main_poster {
+    height: auto;
+    width: 100%;
+    background-color: black;
+    display: flex;
+
+}
+
+.left_side_poster {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.right_side_poster {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.poster_buttons_IT {
+    width: 100%;
+
+}
+
+.buton_IT_back {
+    width: 35%;
+    height: 50px;
+    background-color: black;
+    border: none;
+    border: 1px solid white;
+    color: white;
+    padding: 5px;
+    font-size: 22px;
+
+    transition: .3s;
+}
+
+.one:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+
+}
+
+.one {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.two:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+
+}
+
+.two {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.button_career_poster {
+    height: 50px;
+    width: 30%;
+    border: none;
+    background-color: #007FFF;
+    color: white;
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.button_career_poster:hover {
+    background-color: #0260bf;
+}
+
+@media screen and (max-width:700px) {
+    .main_poster {
+       
+        flex-direction: column;
+
+    }
+}

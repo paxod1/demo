@@ -1,0 +1,46 @@
+import React from 'react'
+import './App.css'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Home from './pages/Home'
+import About from './pages/About'
+import Poster from './pages/Poster'
+import Contact from './pages/Contact'
+
+
+function App() {
+
+  const helo = createBrowserRouter([
+    {
+      element: <Home />,
+      path: "/home"
+    },
+    {
+      element: <About />,
+      path: '/about'
+    },
+    {
+      element: <Poster />,
+      path: '/poster'
+    },
+    {
+      element: <Contact />,
+      path: '/contact'
+    }
+  ])
+
+
+
+  return (
+
+    <div>
+      <RouterProvider router={helo} />
+
+    </div>
+
+  )
+}
+
+export default App
+
+
+
